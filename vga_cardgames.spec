@@ -6,7 +6,7 @@ Summary(pt_BR):	Jogo de carta de baralho para console
 Summary(tr):	Konsolda oynanan kaðýt oyunlarý
 Name:		vga_cardgames
 Version:	1.3.1
-Release:	12
+Release:	13
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/solitaires/%{name}-%{version}.tgz
