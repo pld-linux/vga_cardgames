@@ -1,7 +1,7 @@
 Summary:	Card games for the Linux VGA console
 Summary(fr):	Jeux de cartes pour la console Linux
 Summary(es):	Juego de carta de baraja para consola
-Summary(pl):	Gry karciane dla linuksowek konsoli VGA
+Summary(pl):	Gry karciane dla linuksowej konsoli VGA
 Summary(pt_BR):	Jogo de carta de baralho para console
 Summary(tr):	Konsolda oynanan kaðýt oyunlarý
 Name:		vga_cardgames
