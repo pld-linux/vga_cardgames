@@ -15,7 +15,7 @@ Patch0:		%{name}-misc.patch
 BuildRequires:	svgalib-devel
 %endif
 %ifarch ppc
-BuildRequires:  svgalib4ggi-devel
+BuildRequires:	svgalib4ggi-devel
 %endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 ExclusiveArch:	%{ix86} alpha ppc
