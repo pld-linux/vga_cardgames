@@ -12,13 +12,7 @@ Group:		Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/solitaires/%{name}-%{version}.tgz
 # Source0-md5:	550fa167ff4798ccb6c9419732397e0f
 Patch0:		%{name}-misc.patch
-%ifarch %{ix86} alpha
 BuildRequires:	svgalib-devel
-%endif
-%ifarch ppc
-BuildRequires:	svgalib4ggi-devel
-%endif
-ExclusiveArch:	%{ix86} alpha ppc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
