@@ -6,7 +6,7 @@ Summary(pt_BR):	Jogo de carta de baralho para console
 Summary(tr):	Konsolda oynanan kaðýt oyunlarý
 Name:		vga_cardgames
 Version:	1.3.1
-Release:	11
+Release:	12
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/solitaires/%{name}-%{version}.tgz
@@ -18,8 +18,8 @@ BuildRequires:	svgalib-devel
 %ifarch ppc
 BuildRequires:	svgalib4ggi-devel
 %endif
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 ExclusiveArch:	%{ix86} alpha ppc
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 A number of various card games for the Linux VGA console, including
@@ -58,10 +58,13 @@ Spider gibi fal oyunlarý bu pakette yer alýr.
 %patch -p1
 
 %build
-%{__make} CC="%{__cc}" OPT_FLAGS="%{rpmcflags}"
+%{__make} \
+	CC="%{__cc}" \
+	OPT_FLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
