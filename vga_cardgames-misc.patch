@@ -1,0 +1,51 @@
+--- vga_cardgames/Makefile.orig	Sun Feb 26 14:19:37 1995
++++ vga_cardgames/Makefile	Sun Feb 17 14:06:58 2002
+@@ -8,8 +8,8 @@
+ # ------------------------------------------------------------------- #
+ 
+ # Installation directories
+-BINDIR=		/usr/games
+-LIBDIR=		/usr/games/lib
++BINDIR=		/usr/bin
++LIBDIR=		/usr/lib/games
+ 
+ # Binary name prefix (to avoid clashes with other programs)
+ PREFIX=		vga_
+@@ -22,7 +22,7 @@
+ 
+ # These may be changed, if desired
+ CC=		gcc
+-CCOPTS=		-O2 -m486
++CCOPTS=		$(OPT_FLAGS)
+ 
+ # ------------------------------------------------------------------- #
+ 
+@@ -30,7 +30,7 @@
+ 
+ CFLAGS=	$(CCOPTS) $(OPTIONS) \
+ 	-DCARDSFILE=\"$(LIBDIR)/Cards56x80\" \
+-	-DVGA16FONT=\"$(LIBDIR)/Vga16font8x16\"
++	-DVGA16FONT=\"$(LIBDIR)/Vga16font8x16.cards\"
+ OHHELL=		$(PREFIX)ohhell
+ OHHELLOBJ=	ohhell.o ohlinux.o common.o mouse.o key.o vga16.o
+ SPIDER=		$(PREFIX)spider
+@@ -44,12 +44,13 @@
+ all:	$(OHHELL) $(SPIDER) $(KLONDIKE) $(SOLITAIRE)
+ 
+ install: $(OHHELL) $(SPIDER) $(KLONDIKE) $(SOLITAIRE) Cards56x80 Vga16font8x16
+-	install -o root -m 4711 -s $(OHHELL) $(BINDIR)
+-	install -o root -m 4711 -s $(SPIDER) $(BINDIR)
+-	install -o root -m 4711 -s $(KLONDIKE) $(BINDIR)
+-	install -o root -m 4711 -s $(SOLITAIRE) $(BINDIR)
+-	install -m 444 Cards56x80 $(LIBDIR)
+-	install -m 444 Vga16font8x16 $(LIBDIR)
++	install -d $(DESTDIR)$(BINDIR) $(DESTDIR)$(LIBDIR)
++	install -m 755 $(OHHELL) $(DESTDIR)$(BINDIR)
++	install -m 755 $(SPIDER) $(DESTDIR)$(BINDIR)
++	install -m 755 $(KLONDIKE) $(DESTDIR)$(BINDIR)
++	install -m 755 $(SOLITAIRE) $(DESTDIR)$(BINDIR)
++	install -m 644 Cards56x80 $(DESTDIR)$(LIBDIR)
++	install -m 644 Vga16font8x16 $(DESTDIR)$(LIBDIR)/Vga16font8x16.cards
+ 
+ 
+ $(OHHELL):	$(OHHELLOBJ)
