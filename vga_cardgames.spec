@@ -1,6 +1,8 @@
 Summary:	Card games for the Linux VGA console
 Summary(fr):	Jeux de cartes pour la console Linux
+Summary(es):	Juego de carta de baraja para consola.
 Summary(pl):	Gry karciane dla linuksowek konsoli VGA
+Summary(pt_BR):	Jogo de carta de baralho para console.
 Summary(tr):	Konsolda oynanan kaðýt oyunlarý
 Name:		vga_cardgames
 Version:	1.3.1
@@ -38,15 +40,23 @@ Eine Reihe verschiedener Kartenspiele für die Linux-Konsole, u.a.
 Klondike, Oh Hell, Solitaire und Spider, plus andere beliebte Zeit-
 vergeuder ...
 
+%description -l es
+Varios juegos de baraja para Linux, incluye Klondike, "Oh Hell",
+Solitaire, y Spider, así como otros populares pasatiempos :)
+
 %description -l fr
-Divers jeux de cartes en mode console pour Linux, dont Klondike,
-'Oh Hell', Solitaire, et Spider, ainsi que d'autres passe-temps
-populaires :).
+Divers jeux de cartes en mode console pour Linux, dont Klondike, 'Oh
+Hell', Solitaire, et Spider, ainsi que d'autres passe-temps populaires
+:).
 
 %description -l pl
 Wiele ró¿nych gier karcianych dla linuksowej konsoli VGA, w tym
 Klondike, "Oh Hell", Solitaire i Spider, oraz inne popularne gry do
 tracenia czasu.
+
+%description -l pt_BR
+Vários jogos de carta para o Linux, incluindo Klondike, "Oh Hell",
+Solitaire, e Spider, assim como outros populares passatempos :)
 
 %description -l tr
 Metin ekranda oynanan çeþitli kaðýt oyunlarý. Klondike, Solitaire,
