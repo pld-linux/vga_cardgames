@@ -6,14 +6,19 @@ Summary(pt_BR):	Jogo de carta de baralho para console.
 Summary(tr):	Konsolda oynanan kaðýt oyunlarý
 Name:		vga_cardgames
 Version:	1.3.1
-Release:	9
+Release:	10
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/solitaires/%{name}-%{version}.tgz
 Patch0:		%{name}-misc.patch
+%ifarch %{ix86}
 BuildRequires:	svgalib-devel
+%endif
+%ifarch ppc
+BuildRequires:  svgalib4ggi-devel
+%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-ExclusiveArch:	%{ix86}
+ExclusiveArch:	%{ix86} ppc
 
 %description
 A number of various card games for the Linux VGA console, including
@@ -59,14 +64,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README
 %attr(755,root,root) %{_bindir}/vga_klondike
 %attr(755,root,root) %{_bindir}/vga_ohhell
 %attr(755,root,root) %{_bindir}/vga_solitaire
