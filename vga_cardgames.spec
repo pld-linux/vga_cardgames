@@ -10,6 +10,7 @@ Release:	11
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/solitaires/%{name}-%{version}.tgz
+# Source0-md5:	550fa167ff4798ccb6c9419732397e0f
 Patch0:		%{name}-misc.patch
 %ifarch %{ix86} alpha
 BuildRequires:	svgalib-devel
