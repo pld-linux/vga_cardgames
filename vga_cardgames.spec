@@ -6,7 +6,7 @@ Summary(pt_BR):	Jogo de carta de baralho para console
 Summary(tr):	Konsolda oynanan kaðýt oyunlarý
 Name:		vga_cardgames
 Version:	1.3.1
-Release:	13
+Release:	14
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/solitaires/%{name}-%{version}.tgz
@@ -54,13 +54,15 @@ Spider gibi fal oyunlarý bu pakette yer alýr.
 %build
 %{__make} \
 	CC="%{__cc}" \
-	OPT_FLAGS="%{rpmcflags}"
+	OPT_FLAGS="%{rpmcflags}" \
+	LIBDIR=%{_libdir}/games
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	LIBDIR=%{_libdir}/games
 
 %clean
 rm -rf $RPM_BUILD_ROOT
