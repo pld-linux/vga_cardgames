@@ -11,14 +11,14 @@ License:	distributable
 Group:		Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/solitaires/%{name}-%{version}.tgz
 Patch0:		%{name}-misc.patch
-%ifarch %{ix86}
+%ifarch %{ix86} alpha
 BuildRequires:	svgalib-devel
 %endif
 %ifarch ppc
 BuildRequires:  svgalib4ggi-devel
 %endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-ExclusiveArch:	%{ix86} ppc
+ExclusiveArch:	%{ix86} alpha ppc
 
 %description
 A number of various card games for the Linux VGA console, including
