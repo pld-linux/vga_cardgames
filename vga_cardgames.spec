@@ -49,7 +49,7 @@ Spider gibi fal oyunlarý bu pakette yer alýr.
 
 %prep
 %setup -q -n vga_cardgames
-%patch -p1
+%patch0 -p1
 
 %build
 %{__make} \
