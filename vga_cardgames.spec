@@ -1,9 +1,9 @@
 Summary:	Card games for the Linux VGA console
-Summary(fr.UTF-8):   Jeux de cartes pour la console Linux
-Summary(es.UTF-8):   Juego de carta de baraja para consola
-Summary(pl.UTF-8):   Gry karciane dla linuksowej konsoli VGA
-Summary(pt_BR.UTF-8):   Jogo de carta de baralho para console
-Summary(tr.UTF-8):   Konsolda oynanan kağıt oyunları
+Summary(fr.UTF-8):	Jeux de cartes pour la console Linux
+Summary(es.UTF-8):	Juego de carta de baraja para consola
+Summary(pl.UTF-8):	Gry karciane dla linuksowej konsoli VGA
+Summary(pt_BR.UTF-8):	Jogo de carta de baralho para console
+Summary(tr.UTF-8):	Konsolda oynanan kağıt oyunları
 Name:		vga_cardgames
 Version:	1.3.1
 Release:	14
